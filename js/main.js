@@ -14,11 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     createFlipCards("beaches", '.beaches-cards');
     createFlipCards("temples", '.temples-cards');
     createFlipCards("countries", '.countries-cards');
-    
-    // Load city cards with delay to simulate API fetch
-    setTimeout(() => {
-      loadCityCards();
-    }, 1000);
+    createFlipCards("city_tours", '.city-cards');
   }
 
   // Initialize FAQ functionality on contact page
@@ -32,9 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const getCardsData = async (url) => {
   try {
-    const response = await fetch(url);    
-    const data = await response.json();
-    return data;
+    return await fetch(url).then(response => response.json());
   } catch (error) {
     console.error('Error fetching data:', error);
     return [];
@@ -144,73 +138,69 @@ function handleUrlParameters() {
   }
 }
 
+const setFlipCard = (flipCard, item) => {
+  flipCard.classList.add('flip-card');
+  flipCard.innerHTML = `
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="${item.frontImage}" alt="${item.title}">
+        <div class="flip-card-front-content">
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <img src="${item.backImage}" alt="${item.title} details">
+        <div class="flip-card-back-content">
+          <h3>${item.title}</h3>
+          <p>${item.additionalInfo}</p>
+          <button class="btn-primary">Learn More</button>
+        </div>
+      </div>
+    </div>
+  `;
+};
+
+const setCityCard = (cityCard, city) => {
+  cityCard.classList.add('city-card');
+  cityCard.dataset.city = city.name.toLowerCase();
+  cityCard.dataset.country = city.country.toLowerCase();
+  
+  cityCard.innerHTML = `
+    <div class="city-image">
+      <img src="${city.image}" alt="${city.name}, ${city.country}">
+    </div>
+    <div class="city-content">
+      <span class="city-country">${city.country}</span>
+      <h3 class="city-name">${city.name}</h3>
+      <p class="city-description">${city.description}</p>
+      <button class="btn-primary">Explore Tour</button>
+    </div>
+  `;
+};
+
 // Create Flip Cards
 const createFlipCards = async (type, containerSelector) => {
+  const loadingSpinner = document.querySelector(`#${type}-loading-spinner`);
   const data = await getCardsData(`./data/${type}.json`);
+  console.log(data, type);
   
+  if (loadingSpinner) {
+    loadingSpinner.style.display = 'none';
+  }
+
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
+  const setCard = type === 'city_tours' ? setCityCard : setFlipCard;
+
   data.forEach(item => {
-    const flipCard = document.createElement('div');
-    flipCard.classList.add('flip-card');
-
-    flipCard.innerHTML = `
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="${item.frontImage}" alt="${item.title}">
-          <div class="flip-card-front-content">
-            <h3>${item.title}</h3>
-            <p>${item.description}</p>
-          </div>
-        </div>
-        <div class="flip-card-back">
-          <img src="${item.backImage}" alt="${item.title} details">
-          <div class="flip-card-back-content">
-            <h3>${item.title}</h3>
-            <p>${item.additionalInfo}</p>
-            <button class="btn-primary">Learn More</button>
-          </div>
-        </div>
-      </div>
-    `;
-
-    container.appendChild(flipCard);
+    const card = document.createElement('div');
+    setCard(card, item);
+    container.appendChild(card);
   });
 }
 
-// Load City Cards
-function loadCityCards() {
-  const container = document.querySelector('.city-cards');
-  const loadingSpinner = document.getElementById('loading-spinner');
-  
-  if (!container || !loadingSpinner) return;
-  
-  // Clear loading spinner
-  loadingSpinner.style.display = 'none';
-  
-  // Create city cards
-  cityTours.forEach(city => {
-    const cityCard = document.createElement('div');
-    cityCard.classList.add('city-card');
-    cityCard.dataset.city = city.name.toLowerCase();
-    cityCard.dataset.country = city.country.toLowerCase();
-    
-    cityCard.innerHTML = `
-      <div class="city-image">
-        <img src="${city.image}" alt="${city.name}, ${city.country}">
-      </div>
-      <div class="city-content">
-        <span class="city-country">${city.country}</span>
-        <h3 class="city-name">${city.name}</h3>
-        <p class="city-description">${city.description}</p>
-        <button class="btn-primary">Explore Tour</button>
-      </div>
-    `;
-    
-    container.appendChild(cityCard);
-  });
-}
 
 // Perform Search
 function performSearch(query) {

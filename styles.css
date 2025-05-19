@@ -359,12 +359,12 @@ ul {
   height: 100%;
   backface-visibility: hidden;
   border-radius: var(--border-radius);
-  overflow: hidden;
   box-shadow: var(--shadow);
 }
 
 .flip-card-front {
   background-color: var(--white);
+  overflow: hidden;
 }
 
 .flip-card-front img {
@@ -388,6 +388,7 @@ ul {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .flip-card-back img {
@@ -570,7 +571,7 @@ ul {
 }
 
 .team-img {
-  height: 250px;
+  height: 300px;
   overflow: hidden;
 }
 
