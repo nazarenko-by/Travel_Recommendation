@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TravelCo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">TravelCo</a>
+            
+            <div class="desktop-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            
+            <div class="search-form">
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search destinations...">
+                    <button id="clear-search" class="clear-search-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="submit-search" class="submit-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        
+        <div class="container mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+            
+            <div class="search-container">
+                <input type="text" id="mobile-search-input" class="search-input" placeholder="Search destinations...">
+                <button id="mobile-clear-search" class="clear-search-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="mobile-submit-search" class="submit-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('img/about-hero.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>About <span class="highlight">TravelCo</span></h1>
+            <p>Learn more about our mission, values, and the team behind the unforgettable travel experiences.</p>
+            <a href="#values" class="btn-primary">Our Values</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section bg-light">
+        <div class="container about-content">
+            <h2>Our Story</h2>
+            <p>Founded in 2010 by a group of passionate travelers, TravelCo started as a small blog sharing travel tips and personal experiences. Over the years, it evolved into a full-fledged travel agency dedicated to providing unique and personalized travel experiences.</p>
+            <p>We believe that travel is more than just visiting new places; it's about creating lasting memories, connecting with different cultures, and discovering yourself. That's why we go the extra mile to ensure every trip is tailored to your interests and preferences.</p>
+            <p>From adventurous backpacking trips to luxurious getaways, we offer a wide range of travel options to suit every budget and taste. Our team of experienced travel experts is committed to making your dream vacation a reality.</p>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section values-section" id="values">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="values-container">
+                <ul class="values-list">
+                    <li>
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Exploration</h4>
+                            <p>We encourage a spirit of discovery and curiosity in every journey.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Authenticity</h4>
+                            <p>We value genuine experiences and meaningful connections with local cultures.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Sustainability</h4>
+                            <p>We are committed to responsible travel practices that protect our planet.</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="values-list">
+                    <li>
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Community</h4>
+                            <p>We foster a sense of belonging and connection among travelers.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Joy</h4>
+                            <p>We believe travel should be fun, exciting, and create lasting memories.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Innovation</h4>
+                            <p>We continuously seek new and creative ways to enhance the travel experience.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="img/team-1.jpg" alt="Team Member 1">
+                    </div>
+                    <div class="team-info">
+                        <h3>John Doe</h3>
+                        <span class="team-role">CEO & Founder</span>
+                        <p class="team-desc">John is a travel enthusiast with over 20 years of experience in the industry. He is passionate about creating unique and unforgettable travel experiences for our clients.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="img/team-2.jpg" alt="Team Member 2">
+                    </div>
+                    <div class="team-info">
+                        <h3>Jane Smith</h3>
+                        <span class="team-role">Travel Expert</span>
+                        <p class="team-desc">Jane is our resident travel guru, with extensive knowledge of destinations around the world. She is dedicated to helping clients plan their perfect trip.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="img/team-3.jpg" alt="Team Member 3">
+                    </div>
+                    <div class="team-info">
+                        <h3>Mike Johnson</h3>
+                        <span class="team-role">Customer Support</span>
+                        <p class="team-desc">Mike is committed to providing exceptional customer service and ensuring our clients have a smooth and stress-free travel experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Adventure?</h2>
+            <p>Contact us today to book your dream vacation and create memories that will last a lifetime.</p>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center section">
+        <p>&copy; 2023 TravelCo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

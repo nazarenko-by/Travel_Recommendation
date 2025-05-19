@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TravelCo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">TravelCo</a>
+            
+            <div class="desktop-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+            </div>
+            
+            <div class="search-form">
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search destinations...">
+                    <button id="clear-search" class="clear-search-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="submit-search" class="submit-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        
+        <div class="container mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+            
+            <div class="search-container">
+                <input type="text" id="mobile-search-input" class="search-input" placeholder="Search destinations...">
+                <button id="mobile-clear-search" class="clear-search-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="mobile-submit-search" class="submit-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a')">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>
+              We'd love to hear from you. Let us help you plan your next adventure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section">
+        <div class="container">
+          <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+              <h2>Send Us a Message</h2>
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required>
+                  <p class="error-message" id="name-error"></p>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                  <p class="error-message" id="email-error"></p>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                  <p class="error-message" id="message-error"></p>
+                </div>
+                
+                <button type="submit" class="btn-primary btn-submit">Send Message</button>
+              </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+              <h2>Contact Information</h2>
+              <div class="info-items">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3>Phone</h3>
+                    <p>+1 (555) 123-4567</p>
+                    <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3>Email</h3>
+                    <p>info@travelco.com</p>
+                    <p>support@travelco.com</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3>Address</h3>
+                    <p>123 Adventure Lane</p>
+                    <p>Travel City, TC 98765</p>
+                    <p>United States</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map -->
+              <div class="map-container">
+                <h3>Find Us</h3>
+                <div class="map-placeholder">
+                  <p>Interactive Map Would Be Here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section bg-light">
+        <div class="container">
+          <h2 class="text-center">Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How far in advance should I book my trip?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We recommend booking at least 3-6 months in advance for popular destinations, especially if you're traveling during peak season. For custom itineraries or group travel, 6-12 months is ideal.
+                </p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What payment methods do you accept?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We accept all major credit cards, bank transfers, and PayPal. For certain destinations, we also offer payment plans to help you budget for your dream vacation.
+                </p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Do you offer travel insurance?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, we offer comprehensive travel insurance packages through our trusted partners. We strongly recommend purchasing travel insurance to protect your investment in case of unexpected events.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toast notification -->
+      <div id="toast" class="toast">
+        <div class="toast-content">
+          <i class="fas fa-check-circle"></i>
+          <div class="toast-message">
+            <h4>Success!</h4>
+            <p>Your message has been sent. We'll get back to you soon!</p>
+          </div>
+        </div>
+        <div class="toast-progress"></div>
+      </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "Japan",
+      "description": "Where tradition meets innovation",
+      "additionalInfo": "Japan seamlessly blends ancient traditions with cutting-edge technology. From Tokyo's neon-lit skyscrapers to Kyoto's peaceful temples and the natural beauty of Mount Fuji, Japan offers diverse experiences for every traveler.",
+      "frontImage": "./public/img/japan.jpeg",
+      "backImage": "./public/img/japan_back.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Italy",
+      "description": "Art, history, and culinary delights",
+      "additionalInfo": "Italy is a treasure trove of art, history, and gastronomy. Explore Rome's ancient ruins, Florence's Renaissance masterpieces, Venice's romantic canals, and savor authentic pasta, pizza, and gelato throughout your journey.",
+      "frontImage": "./public/img/italy.jpeg",
+      "backImage": "./public/img/italy_back.jpg"
+    },
+    {
+      "id": 3,
+      "title": "New Zealand",
+      "description": "Adventure in breathtaking landscapes",
+      "additionalInfo": "New Zealand is a paradise for outdoor enthusiasts. From the dramatic fjords of Milford Sound to the geothermal wonders of Rotorua and the picture-perfect beaches of the Bay of Islands, its diverse landscapes offer endless adventures.",
+      "frontImage": "./public/img/new_zealand.jpeg",
+      "backImage": "./public/img/new_zealand_back.jpeg"
+    }
+]

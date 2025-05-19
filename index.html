@@ -1,38 +1,158 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Travel Recommendation</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelCo - Unforgettable Travel Experiences</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add the data.js before main.js -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/socialSidebar.js"></script>
 </head>
 <body>
-    <nav>
-        <h1>Travel With Us</h1>
-        <ul>
-            <li><a href="./index.html" id="home">Home </a></li>
-            <li><a href="./about_us.html" id="about_us">About Us</a></li>
-            <li><a href="./contact.html" id="contact">Contact</a></li>
-            <li><input type="text" id="conditionInput" placeholder="Search"></li>
-            <li><button id='btnSearch'>Search</button></li>
-            <li><button id='btnSearchClear'>Clear</button></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">TravelCo</a>
+            
+            <div class="desktop-nav">
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            
+            <div class="search-form">
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search destinations...">
+                    <button id="clear-search" class="clear-search-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="submit-search" class="submit-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        
+        <div class="container mobile-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            
+            <div class="search-container">
+                <input type="text" id="mobile-search-input" class="search-input" placeholder="Search destinations...">
+                <button id="mobile-clear-search" class="clear-search-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="mobile-submit-search" class="submit-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
     </nav>
-
-    <div class="container">
-        <div class="social-network">
-            <form action="">
-                <button><i class="fa fa-facebook" aria-hidden="true"></i></button>
-                <button><i class="fa fa-twitter" aria-hidden="true"></i></button>
-                <button><i class="fa fa-youtube-play" aria-hidden="true"></i></button>
-                <button><i class="fa fa-linkedin-square" aria-hidden="true"></i></button>
-                <button><i class="fa fa-pinterest" aria-hidden="true"></i></button>
-                <button><i class="fa fa-instagram" aria-hidden="true"></i></button>
-            </form>
+    
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
         </div>
     </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('./public/img/hero.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Discover <span class="highlight">Unforgettable</span> Travel Experiences</h1>
+            <p>Explore the world's most beautiful destinations with expert guides and personalized itineraries.</p>
+            <a href="#" class="btn-primary">Explore Tours</a>
+        </div>
+    </section>
 
-    <script src="https://use.fontawesome.com/d76ff407e7.js"></script>
-    <script src="./index.js"></script>
+    <!-- Welcome Section -->
+    <section class="section bg-light">
+        <div class="container welcome-content">
+            <h2>Welcome to TravelCo</h2>
+            <p>At TravelCo, we believe that travel is more than just visiting places; it's about creating unforgettable experiences. Our expertly crafted tours are designed to immerse you in the local culture, offering unique insights and adventures. Whether you're seeking relaxation on pristine beaches, exploration of ancient ruins, or thrilling outdoor activities, TravelCo is your gateway to the world's most captivating destinations.</p>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Top Recommendations</h2>
+            
+            <h3>Beaches</h3>
+            <div class="grid-cards beaches-cards">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            
+            <h3>Temples</h3>
+            <div class="grid-cards temples-cards">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            
+            <h3>Countries</h3>
+            <div class="grid-cards countries-cards">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- City Tours Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2>Explore City Tours</h2>
+            <div class="loading-spinner" id="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <div class="grid-cards city-cards">
+                <!-- City cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Adventure?</h2>
+            <p>Sign up for our newsletter and get exclusive access to the latest travel deals, destination guides, and insider tips.</p>
+            <a href="#" class="btn-primary">Subscribe Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <div class="container">
+            <p>&copy; 2023 TravelCo. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

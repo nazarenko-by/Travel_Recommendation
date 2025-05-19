@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "Angkor Wat",
+      "description": "Ancient temple complex in Cambodia",
+      "additionalInfo": "Built in the early 12th century, Angkor Wat is the largest religious monument in the world and a UNESCO World Heritage Site. Its stunning architecture and intricate carvings tell the story of ancient Khmer civilization.",
+      "frontImage": "./public/img/angkor_wat.jpg",
+      "backImage": "./public/img/angkor_wat_back.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Kyoto Temples",
+      "description": "Tranquil Japanese Buddhist sanctuaries",
+      "additionalInfo": "Kyoto is home to over 1,600 Buddhist temples, including the famous golden pavilion (Kinkaku-ji) and the serene Zen rock garden at Ryoan-ji. Experience traditional Japanese culture through temple stays and tea ceremonies.",
+      "frontImage": "./public/img/kyoto_temples.jpeg",
+      "backImage": "./public/img/kyoto_temples_back.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Bagan Temples",
+      "description": "Ancient Buddhist temples in Myanmar",
+      "additionalInfo": "The ancient city of Bagan features over 2,000 well-preserved pagodas and temples dating back to the 11th century. Watching the sunrise or sunset over the temple plains from a hot air balloon is an unforgettable experience.",
+      "frontImage": "./public/img/bagan_temples.jpg",
+      "backImage": "./public/img/bagan_temples_back.jpg"
+    }
+]

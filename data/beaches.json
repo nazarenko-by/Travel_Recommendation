@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "Maldives Paradise",
+      "description": "Crystal clear waters and white sand beaches",
+      "additionalInfo": "The Maldives is a tropical paradise with over 1,000 coral islands and some of the world's most luxurious resorts. Perfect for honeymooners and diving enthusiasts.",
+      "frontImage": "./public/img/maldives_paradise.jpeg",
+      "backImage": "./public/img/maldives_paradise_back.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Bali Beaches",
+      "description": "Tropical paradise with stunning sunsets",
+      "additionalInfo": "Bali's beaches range from palm-fringed white sand coasts on the south to the more dramatic black sand beaches on the western shoreline. Don't miss the iconic sunset at Kuta Beach.",
+      "frontImage": "./public/img/bali_beaches.jpeg",
+      "backImage": "./public/img/bali_beaches_back.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Santorini Shores",
+      "description": "Volcanic beaches with unique black sand",
+      "additionalInfo": "Santorini's beaches are unlike any other in the world, with red, black, and white volcanic sands. The Red Beach near Akrotiri and the black sand beach of Perissa are must-visits.",
+      "frontImage": "./public/img/santorini_shores.jpg",
+      "backImage": "./public/img/santorini_shores_back.jpg"
+    }
+]
